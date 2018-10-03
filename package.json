@@ -1,0 +1,27 @@
+{
+  "name": "entei",
+  "version": "0.0.1",
+  "description": "API for tech events in Singapore",
+  "main": "index.js",
+  "keywords": [
+    "singapore",
+    "event",
+    "tech",
+    "meetup"
+  ],
+  "author": "Lim Chee Aun",
+  "license": "ISC",
+  "scripts": {
+    "start": "micro",
+    "dev": "micro-dev"
+  },
+  "dependencies": {
+    "dotenv": "~6.0.0",
+    "got": "~9.2.2",
+    "micro": "~9.3.3",
+    "spacetime": "~4.4.0"
+  },
+  "devDependencies": {
+    "micro-dev": "~3.0.0"
+  }
+}

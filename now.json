@@ -1,0 +1,11 @@
+{
+  "name": "entei",
+  "alias": "entei.now.sh",
+  "dotenv": true,
+  "files": [
+    ".env",
+    "index.js",
+    "package.json",
+    "package-lock.json"
+  ]
+}
