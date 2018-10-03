@@ -1,11 +1,13 @@
 {
   "name": "entei",
   "alias": "entei.now.sh",
-  "dotenv": true,
   "files": [
     ".env",
     "index.js",
     "package.json",
     "package-lock.json"
-  ]
+  ],
+  "env": {
+    "MEETUP_API_KEY": "@entei-meetup-api-key"
+  }
 }
