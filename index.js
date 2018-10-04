@@ -21,13 +21,14 @@ module.exports = async (req, res) => {
       lat: '1.3521',
       lon: '103.8198',
       page: 100,
-      radius: 15, // miles
+      radius: 16, // miles
     },
     json: true,
   }).then(response => {
     const events = response.body.events.filter(event => {
       const topics = event.group.topics.map(t => t.name).join();
-      return event.visibility === 'public' && event.venue && event.venue.country === 'sg' && !/bitcoin|blockchain/i.test(topics);
+      console.log(`⏩  ${event.name} || ${event.visibility} || ${event.venue.country}\n\t${topics}`);
+      return event.visibility === 'public' && event.venue && /^sg$/i.test(event.venue.country) && !/bitcoin|blockchain|business/i.test(topics);
     }).map(event => {
       const { name, time, local_date, local_time, venue, group, link } = event;
       const { lat, lon, address_1, address_2, address_3, city, country } = venue;
